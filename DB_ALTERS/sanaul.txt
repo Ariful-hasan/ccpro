@@ -1,0 +1,113 @@
+menus = Structure&Data
+pages = Structure&Data
+roles = Structure&Data
+cc_settings = Structure&Data
+chat_leave_msg = Structure
+email_fetch_inboxes = Structure
+opt_otc_number = Structure
+chat_queue = Structure
+chat_token = Structure
+
+agents = Add role_id field. Type=Char;Length=10;NULL=true
+
+
+skill_category = Structure&Data
+
+ALTER TABLE `cc`.`cc_settings`
+  CHANGE COLUMN `id` `id` char(10) NOT NULL DEFAULT '';
+
+-------------------------------------------- 11-9-2018 (done) ----------------------------------------
+ALTER TABLE `cc`.`roles`
+  ADD COLUMN `group_name` char(1) NOT NULL DEFAULT '' COMMENT 'A-agent, R-root, S-supervisor' AFTER `name`;
+
+UPDATE `cc`.`roles` SET `group_name`='R' WHERE `id`='1530771846';
+UPDATE `cc`.`roles` SET `group_name`='A' WHERE `id`='1530772919';
+UPDATE `cc`.`roles` SET `group_name`='S' WHERE `id`='1530773743';
+
+
+------------------------------------ 24-10-2018(done) --------------------------------------------------------------
+ALTER TABLE `skill`
+ADD COLUMN `skill_type`  char(1) NOT NULL DEFAULT '' AFTER `vcc_id`;
+
+UPDATE skill SET skill_type='V' WHERE skill_id IN("AS","AP","AO","AM","AQ","AR","AN","BB","AL","AK","AF","AE","AC","AG","AH","AD","BC","AB","AA","AU","AZ");
+
+
+UPDATE skill SET skill_type='P' WHERE skill_id IN("AT","AV","AX");
+
+
+UPDATE skill SET skill_type='E' WHERE skill_id IN("AY","BE","BF","BG","BH");
+
+
+UPDATE skill SET skill_type='C' WHERE skill_id IN("AJ","BI","BJ","BK","BL");
+
+
+
+UPDATE skill SET skill_type='O' WHERE skill_id IN("AI","AW","BA","BD","BM");
+
+
+------------------------------------- 25-10-2018 (done) ------------------------------------------------------------
+ALTER TABLE chat_detail_log
+ADD COLUMN call_start_time  timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP FIRST,
+ADD COLUMN name  char(20) NOT NULL DEFAULT '' AFTER note,
+ADD COLUMN verify_user  char(1) NOT NULL DEFAULT '' AFTER contact_number,
+ADD COLUMN customer_feedback  char(5) NULL DEFAULT '' AFTER url_duration
+
+---------------------------------------------- 14-11-2018 (done) --------------------------------------------------
+ALTER TABLE rt_hangup_party_summary
+ADD COLUMN smonth  char(2) NOT NULL DEFAULT '' AFTER sminute;
+
+ALTER TABLE rt_hangup_party_summary
+ADD COLUMN shalf_hour  char(2) NOT NULL DEFAULT '' AFTER shour;
+
+ALTER TABLE rt_hangup_party_summary
+ADD COLUMN squarter  char(1) NOT NULL DEFAULT '' AFTER smonth;
+
+ALTER TABLE rt_hangup_party_summary
+ADD COLUMN syear char(4) NOT NULL DEFAULT '' AFTER squarter;
+
+ALTER TABLE rt_hangup_party_summary
+ADD COLUMN transfer_call_count DECIMAL(7,0) UNSIGNED NOT NULL DEFAULT 0 AFTER others_call_count;
+
+ALTER TABLE rt_hangup_party_summary
+ADD COLUMN ivr_call_count DECIMAL(7,0) UNSIGNED NOT NULL DEFAULT 0 AFTER transfer_call_count;
+
+ALTER TABLE rt_hangup_party_summary
+ADD COLUMN queue_call_count DECIMAL(7,0) UNSIGNED NOT NULL DEFAULT 0 AFTER ivr_call_count;
+
+ALTER TABLE `rt_hangup_party_summary`
+DROP INDEX `shour` ,
+ADD INDEX `shour` (`sdate`, `shour`, `sminute`, `smonth`, `syear`) USING BTREE
+
+
+-------------------------------------------- 03-12-2018 (done) ---------------------------------------------------------
+ALTER TABLE rt_call_disposition_summary
+ADD COLUMN shour  char(2) NOT NULL DEFAULT '' AFTER sdate;
+
+ALTER TABLE rt_call_disposition_summary
+ADD COLUMN shalf_hour  char(2) NOT NULL DEFAULT '' AFTER shour;
+
+ALTER TABLE rt_call_disposition_summary
+ADD COLUMN sminute  char(2) NOT NULL DEFAULT '' AFTER shalf_hour;
+
+ALTER TABLE rt_call_disposition_summary
+ADD COLUMN smonth  char(2) NOT NULL DEFAULT '' AFTER sminute;
+
+ALTER TABLE rt_call_disposition_summary
+ADD COLUMN squarter  char(1) NOT NULL DEFAULT '' AFTER smonth;
+
+ALTER TABLE rt_call_disposition_summary
+ADD COLUMN syear char(4) NOT NULL DEFAULT '' AFTER squarter;
+
+
+-------------------------------------------------- 11-07-2019 -----------------------------------------------------------
+ALTER TABLE `ivr_xfer` DROP COLUMN `id`
+ALTER TABLE `ivr_xfer` MODIFY COLUMN `ivr_branch` char(30) NOT NULL DEFAULT '' AFTER `title`
+
+-------------------------------------------------- 04-08-2019 -----------------------------------------------------------
+ALTER TABLE rt_skill_call_summary ADD COLUMN query_call_count decimal(5,0) unsigned NOT NULL DEFAULT '0';
+ALTER TABLE rt_skill_call_summary ADD COLUMN request_call_count decimal(5,0) unsigned NOT NULL DEFAULT '0';
+ALTER TABLE rt_skill_call_summary ADD COLUMN complaint_call_count decimal(5,0) unsigned NOT NULL DEFAULT '0';
+
+ALTER TABLE log_agent_outbound_manual ADD COLUMN disposition_id char(4) NOT NULL DEFAULT '';
+ALTER TABLE log_agent_outbound_manual ADD COLUMN disposition_count decimal(1,0) NOT NULL DEFAULT '0';
+ALTER TABLE log_agent_outbound_manual ADD COLUMN wrap_up_time decimal(2,0) unsigned NOT NULL DEFAULT '0';

@@ -1,0 +1,34 @@
+.call-log-window { 
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    width: 500px;
+	display:block;
+}
+.call-log-window .tab-call-log .tabCL { width:100px; background-color:#8AD0EC; float:left; border:1px solid #2097C7; height:25px; line-height:25px; padding:0 5px; cursor:pointer; margin-right:-21px; margin-left:20px; box-shadow: -2px -2px 2px #777777; } 
+.call-log-window .call-log-container { background-color:#ffffff; border:1px solid #2097C7; max-height: 400px !important; height:auto; overflow: auto; margin-top:-1px; padding:5px; box-shadow:0px 0px 5px #777777; border-radius:5px; width:507px; }
+.call-log-window .call-log-container.inbound { display:none; }
+.call-log-window .tab-call-log .tabCL.active { background-color:#ffffff; border-bottom:1px solid #ffffff; cursor:pointer; }
+.call-log-window .call-log-container .row.active { background-color:#EEEEEE; }
+.call-log-window .call-log-container .row-head { margin:0 1px; }
+.call-log-window .call-log-container .row-head .cell {  background-color:#DDEBF9; font-weight:bold; }
+.call-log-window .call-log-container .row-head .cell, .call-log-window .call-log-container .row .cell { border: 1px solid #cccccc; height:30px; line-height:30px; padding:0 5px; maring-top:-1px; float: left; width:151px; margin-top:-1px; margin-left:-1px; cursor:default; }
+.call-log-window .btn-close { 
+	border: 1px solid #999999;
+	box-shadow: -1px -1px 1px #555555;
+	float: right;
+	font-size: 21px;
+	font-weight: bold;
+	height: 25px;
+	margin-right: -10px;
+	text-align: center;
+	width: 25px;
+	z-index: 1000; 
+	cursor: pointer;
+}
+.call-log-window .log-content { height:368px; width:503px; position:absolute; margin:-1px 0 0 0; overflow:auto; border:1px solid #cccccc; border-bottom:none; }
+
+.clear { clear: both; height:0; width:0; }
+.child { width:250px; height:150px; border:1px solid #000000; position:absolute; top:50%; left:50%; margin-top:-75px; margin:-125px; }

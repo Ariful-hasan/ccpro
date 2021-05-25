@@ -1,0 +1,158 @@
+StartFontMetrics 4.1
+Notice Converted by PHP-font-lib
+Comment https://github.com/PhenX/php-font-lib
+EncodingScheme FontSpecific
+Copyright Copyright: Mustafa Jabbar. All rights reserved. First released on 21 February 2004. Version 1.0
+FontName SutonnyOMJ
+FontSubfamily Regular
+UniqueID Vrinda Regular
+FullName SutonnyOMJ
+Version Ananda Computers
+PostScriptName SutonnyOMJ
+Trademark ™  National Centre for Software Technology, Bengali, Full font. Contains font + Unicode set requirements + conjuncts. Sent o
+CompatibleFullName 卵瑯湮祏䵊
+Weight Medium
+ItalicAngle 0
+IsFixedPitch false
+UnderlineThickness 20
+UnderlinePosition -133
+FontHeightOffset 0
+Ascender 703
+Descender 297
+FontBBox -463 -457 1584 924
+StartCharMetrics 912
+U 32 ; WX 269 ; N space ; G 3
+U 33 ; WX 300 ; N .notdef ; G 882
+U 34 ; WX 367 ; N .notdef ; G 883
+U 35 ; WX 450 ; N .notdef ; G 884
+U 37 ; WX 750 ; N .notdef ; G 885
+U 39 ; WX 162 ; N .notdef ; G 886
+U 40 ; WX 300 ; N .notdef ; G 887
+U 41 ; WX 300 ; N .notdef ; G 888
+U 42 ; WX 450 ; N .notdef ; G 889
+U 43 ; WX 508 ; N .notdef ; G 890
+U 44 ; WX 225 ; N .notdef ; G 891
+U 45 ; WX 300 ; N .notdef ; G 892
+U 46 ; WX 225 ; N .notdef ; G 893
+U 47 ; WX 250 ; N .notdef ; G 894
+U 58 ; WX 250 ; N .notdef ; G 895
+U 59 ; WX 250 ; N .notdef ; G 896
+U 60 ; WX 508 ; N .notdef ; G 897
+U 61 ; WX 508 ; N .notdef ; G 898
+U 62 ; WX 508 ; N .notdef ; G 899
+U 63 ; WX 399 ; N .notdef ; G 900
+U 91 ; WX 300 ; N .notdef ; G 909
+U 93 ; WX 300 ; N .notdef ; G 908
+U 123 ; WX 432 ; N .notdef ; G 910
+U 125 ; WX 432 ; N .notdef ; G 911
+U 176 ; WX 447 ; N .notdef ; G 905
+U 215 ; WX 646 ; N .notdef ; G 906
+U 247 ; WX 612 ; N .notdef ; G 907
+U 2404 ; WX 464 ; N ch262 ; G 4
+U 2405 ; WX 348 ; N nbspace ; G 5
+U 2433 ; WX 2 ; N ch263 ; G 6
+U 2434 ; WX 301 ; N danda ; G 7
+U 2435 ; WX 317 ; N doubledanda ; G 8
+U 2437 ; WX 606 ; N bn_candrabindu ; G 9
+U 2438 ; WX 785 ; N bn_anusvara ; G 10
+U 2439 ; WX 465 ; N bn_visarga ; G 11
+U 2440 ; WX 506 ; N bn_a ; G 12
+U 2441 ; WX 517 ; N bn_aa ; G 13
+U 2442 ; WX 560 ; N bn_i ; G 14
+U 2443 ; WX 597 ; N bn_ii ; G 15
+U 2444 ; WX 411 ; N bn_u ; G 16
+U 2447 ; WX 565 ; N bn_uu ; G 17
+U 2448 ; WX 585 ; N bn_ri ; G 18
+U 2451 ; WX 539 ; N bn_li ; G 19
+U 2452 ; WX 603 ; N bn_e ; G 20
+U 2453 ; WX 564 ; N bn_ai ; G 21
+U 2454 ; WX 477 ; N bn_o ; G 22
+U 2455 ; WX 485 ; N bn_au ; G 23
+U 2456 ; WX 465 ; N bn_ka ; G 24
+U 2457 ; WX 453 ; N bn_kha ; G 25
+U 2458 ; WX 405 ; N bn_ga ; G 26
+U 2459 ; WX 450 ; N bn_gha ; G 27
+U 2460 ; WX 593 ; N bn_nga ; G 28
+U 2461 ; WX 562 ; N bn_ca ; G 29
+U 2462 ; WX 770 ; N bn_cha ; G 30
+U 2463 ; WX 427 ; N bn_ja ; G 31
+U 2464 ; WX 397 ; N bn_jha ; G 32
+U 2465 ; WX 514 ; N bn_nya ; G 33
+U 2466 ; WX 413 ; N bn_tta ; G 34
+U 2467 ; WX 450 ; N bn_ttha ; G 35
+U 2468 ; WX 562 ; N bn_dda ; G 36
+U 2469 ; WX 471 ; N bn_ddha ; G 37
+U 2470 ; WX 468 ; N bn_nna ; G 38
+U 2471 ; WX 437 ; N bn_ta ; G 39
+U 2472 ; WX 453 ; N bn_tha ; G 40
+U 2474 ; WX 525 ; N bn_da ; G 41
+U 2475 ; WX 579 ; N bn_dha ; G 42
+U 2476 ; WX 450 ; N bn_na ; G 43
+U 2477 ; WX 522 ; N bn_pa ; G 44
+U 2478 ; WX 460 ; N bn_pha ; G 45
+U 2479 ; WX 437 ; N bn_ba ; G 46
+U 2480 ; WX 419 ; N bn_bha ; G 47
+U 2482 ; WX 509 ; N bn_ma ; G 48
+U 2483 ; WX 380 ; N glyph1254 ; G 858
+U 2484 ; WX 691 ; N glyph1263 ; G 867
+U 2485 ; WX 750 ; N glyph1264 ; G 868
+U 2486 ; WX 520 ; N bn_ya ; G 49
+U 2487 ; WX 437 ; N bn_ra ; G 50
+U 2488 ; WX 512 ; N bn_la ; G 51
+U 2489 ; WX 465 ; N bn_sha ; G 52
+U 2492 ; WX 201 ; N bn_ssa ; G 53
+U 2493 ; WX 1599 ; N bn_sa ; G 54
+U 2494 ; WX 197 ; N bn_ha ; G 55
+U 2495 ; WX 191 ; N bn_nukta ; G 56
+U 2496 ; WX 197 ; N bn_aakaar ; G 57
+U 2497 ; WX 0 ; N bn_ikaar ; G 58
+U 2498 ; WX 0 ; N bn_iikaar ; G 59
+U 2499 ; WX 0 ; N bn_ukaar ; G 60
+U 2500 ; WX 0 ; N bn_uukaar ; G 61
+U 2503 ; WX 297 ; N bn_rikaar ; G 62
+U 2504 ; WX 314 ; N bn_rrikaar ; G 63
+U 2507 ; WX 561 ; N bn_ekaar ; G 64
+U 2508 ; WX 548 ; N bn_aikaar ; G 65
+U 2509 ; WX 0 ; N bn_okaar ; G 66
+U 2510 ; WX 404 ; N glyph1255 ; G 859
+U 2519 ; WX 225 ; N bn_aukaar ; G 67
+U 2524 ; WX 536 ; N bn_halanth ; G 68
+U 2525 ; WX 414 ; N bn_aumark ; G 69
+U 2527 ; WX 445 ; N bn_rra ; G 70
+U 2528 ; WX 635 ; N bn_rha ; G 71
+U 2529 ; WX 457 ; N bn_yya ; G 72
+U 2530 ; WX 357 ; N bn_rri ; G 73
+U 2531 ; WX 281 ; N bn_lli ; G 74
+U 2533 ; WX 749 ; N glyph1258 ; G 862
+U 2534 ; WX 462 ; N bn_likaar ; G 75
+U 2535 ; WX 384 ; N bn_llikaar ; G 76
+U 2536 ; WX 448 ; N bn_zero ; G 77
+U 2537 ; WX 499 ; N bn_one ; G 78
+U 2538 ; WX 434 ; N bn_two ; G 79
+U 2539 ; WX 492 ; N bn_three ; G 80
+U 2540 ; WX 481 ; N bn_four ; G 81
+U 2541 ; WX 481 ; N bn_five ; G 82
+U 2542 ; WX 518 ; N bn_six ; G 83
+U 2543 ; WX 476 ; N bn_seven ; G 84
+U 2544 ; WX 455 ; N bn_eight ; G 85
+U 2545 ; WX 447 ; N bn_nine ; G 86
+U 2546 ; WX 407 ; N asa_ra ; G 87
+U 2547 ; WX 383 ; N asa_ba ; G 88
+U 2548 ; WX 414 ; N bn_rupeemark ; G 89
+U 2549 ; WX 518 ; N bn_rupeesign ; G 90
+U 2550 ; WX 612 ; N bn_currency1 ; G 91
+U 2551 ; WX 245 ; N bn_currency2 ; G 92
+U 2552 ; WX 385 ; N bn_currency3 ; G 93
+U 2553 ; WX 288 ; N bn_currency4 ; G 94
+U 2554 ; WX 418 ; N bn_currencyless ; G 95
+U 2555 ; WX 416 ; N glyph1256 ; G 860
+U 2556 ; WX 348 ; N glyph1257 ; G 861
+U 8204 ; WX 80 ; N glyph1259 ; G 863
+U 8205 ; WX 103 ; N glyph1260 ; G 864
+U 8216 ; WX 207 ; N .notdef ; G 903
+U 8217 ; WX 206 ; N .notdef ; G 904
+U 8220 ; WX 377 ; N .notdef ; G 901
+U 8221 ; WX 376 ; N .notdef ; G 902
+U 9676 ; WX 448 ; N glyph1265 ; G 869
+EndCharMetrics
+EndFontMetrics

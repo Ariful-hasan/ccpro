@@ -1,0 +1,40 @@
+#proactive-chat-window { font-family:Tahoma !important; }
+#proactive-chat-window { 
+	width:280px;
+	height:275px;
+	border-width:1px;
+	border-style:solid;
+	border-color:#000000;
+	position:fixed;
+	bottom:0;
+	right:5px;
+	#border-radius:5px 5px 0 0;
+	z-index:5000;
+	#box-shadow:0 0 5px #000000;
+	padding-left:0 !important;
+	padding-right:0 !important;
+	background-color:#ffffff;
+}
+#proactive-chat-window .pcw-header {
+	height:32px;
+	line-height:30px;
+	/*border-width:1px;
+	border-style:solid;*/
+	border:none;
+	font-weight:bold;
+	border-radius:3px 3px 0 0;
+	padding-left:5px;
+	color:#ffffff;
+	border-top-color:#E9EAED;
+	border-right-color:#E9EAED;
+	border-left-color:#E9EAED;
+	background: -webkit-linear-gradient(#faa61a, #b76f05); /* For Safari 5.1 to 6.0 */
+	background: -o-linear-gradient(#faa61a, #b76f05); /* For Opera 11.1 to 12.0 */
+	background: -moz-linear-gradient(#faa61a, #b76f05); /* For Firefox 3.6 to 15 */
+	background: linear-gradient(#faa61a, #b76f05); /* Standard syntax */
+}
+#proactive-chat-window .info-header { padding:20px 20px 30px 20px; font-size:22px; color:#AA3333; text-align:center; }
+#proactive-chat-window .info { padding:16px; font-size:14px; text-align:center; color:#385D8A; font-weight:bold; }
+#proactive-chat-window .buttons { padding:20px; font-size:15px; vertical-align:middle; position:absolute; bottom:0; left:0; right:0; }
+#proactive-chat-window .buttons .chat-now { text-decoration:none !important; font-size:14px; font-weight:bold; color:#ffffff; padding:6px 11px; border-radius:5px; background-color:#4f81bd; border:3px solid #385d8a; position:absolute; left:20px; bottom:30px; }
+#proactive-chat-window .buttons .no-thanks { font-size:14px; position:absolute; right:20px; bottom:30px; text-decoration:none !important; font-weight:bold; color:#ffffff; padding:6px 11px; border-radius:5px; background-color:#4f81bd; border:3px solid #385d8a; }

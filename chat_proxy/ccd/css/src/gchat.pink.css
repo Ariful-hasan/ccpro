@@ -1,0 +1,37 @@
+/*------------ pink theme -----------------*/
+.g-chat-customer-window.gccw-pink {
+	/*background-color:#ed017f;*/
+}
+.g-chat-customer-window.gccw-pink,
+.g-chat-customer-window.gccw-pink .gccw-header {
+	border-color:#ed017f;
+}
+.g-chat-customer-window.gccw-pink #cCustomerInfoSend, .g-chat-customer-window.gccw-pink .gccw-header {
+	color:#ffffff;
+	border:1px solid #ed017f;
+	background-color:#ed017f;
+	/*
+	background: -webkit-linear-gradient(#7f97ca, #4965A0);
+	background: -o-linear-gradient(#7f97ca, #4965A0);
+	background: -moz-linear-gradient(#7f97ca, #4965A0);
+	background: linear-gradient(#7f97ca, #4965A0);
+	*/
+}
+.g-chat-customer-window.gccw-pink .gccw-footer {
+	background-color:#F5F5F5;
+}
+.g-chat-customer-window.gccw-pink .gccw-body {
+	background-color:#FFFFFF;
+}
+.g-chat-customer-window.gccw-blue .btn-primary {
+    background-color: #fff;
+    background-image: none;
+    border-color: #ddd;
+    color: #000;
+}
+.g-chat-customer-window.gccw-blue .btn-return {
+    background-color: #ffb822;
+    background-image: none;
+    border-color: #ffb822;
+    color: #000;
+}

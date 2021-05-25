@@ -1,0 +1,68 @@
+.icon-mt{
+    margin-top: 16% !important;
+}
+.icon-sz{
+    font-size: 60% !important;
+}
+
+.bg-aqua {
+    background-color: #5471ff !important;
+}
+.bg-green {
+    background-color: #0abb87 !important;
+}
+.bg-yellow {
+    background-color: #ffb822 !important;
+}
+.bg-red {
+    background-color:#fd397a !important;
+}
+.bg-red:hover {
+    box-shadow: 2px 5px 16px 2px #ff9d9d;
+}
+.bg-yellow:hover {
+    box-shadow: 2px 4px 16px 2px #ffdb90;
+}
+.bg-green:hover {
+    box-shadow: 2px 4px 16px 2px #93d3a2;
+}
+.bg-aqua:hover {
+    box-shadow: 2px 4px 16px 2px #a9b8ff;
+}
+.ml-2{
+    margin-left: 16px;
+}
+h4{
+    font-size: 22px;
+}
+.no-hover:hover {
+    color: #14151d!important;
+}
+.progress{position: relative; top:10px;border: 1px solid #ddd;}
+/*.box-panel{height: 304px;}*/
+.legend{font-size: 12px; font-weight: bold;}
+.mt-90{
+    margin-top: 90px;
+}
+.legend{
+    font-size: 15px;
+    margin-top: 14%;
+    text-align: center!important;
+    font-weight: bold;
+}
+.wait-time{
+    text-align: right;
+    font-size: 2em;
+    line-height: 0px;
+    text-shadow: 2px 2px 2px #ccc;
+    color: #1dc9b7;
+    margin-top: 111px;
+}
+.panel-heading{
+    background-color: white!important;
+    font-size: 16px;
+}
+.icn{
+    font-size: 20px;
+    color: #a3cc00;
+}

@@ -1,0 +1,403 @@
+
+.form_table td.form_column_submit {
+	text-align:left;
+	padding: 10px;
+	padding-left: 200px;
+}
+
+form[name=frm_search] .form_row td input[name=stime],
+form[name=frm_search] .form_row td input[name=etime],
+.src-form .form_row td input[name=stime],
+.src-form .form_row td input[name=etime]
+{
+  	width:52px !important;
+	padding-left: 8px;
+	padding-right: 8px;
+}
+
+.form_submit_button {
+	background-color: #49AFCD;
+    background-image: linear-gradient(to bottom, #5BC0DE, #2F96B4);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    line-height: 22px;
+	width: 80px !important;
+	display: inline !important;
+}
+
+
+.form_table {
+	margin-top: 15px;
+}
+.form_table td {
+	padding: 5px;
+}
+form .form_table tr td{
+	border: none !important;
+}
+tr.form_row_head {
+	border: 1px solid #e8e8e8;
+    /*border-bottom: 2px solid rgba(31, 181, 172, 1.0); */ 
+}
+tr.form_row_head td {	
+     background-color: #f5f5f5;
+    border: 1px solid #e8e8e8;
+    border-bottom: 2px solid rgba(31, 181, 172, 1.0);
+    vertical-align: top;  
+	font-weight: bold;
+	color: #183b46;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: middle;
+}
+button, input {
+    line-height: normal;
+}
+label, input, button, select, textarea {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+input, button, select, textarea {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+input, textarea, .uneditable-input {
+    margin-left: 0;
+}
+input, textarea, .uneditable-input {
+    margin-left: 0;
+}
+textarea {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;	
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;	
+}
+
+
+
+
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0 none;
+}
+
+
+select {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    width: 220px;
+}
+
+select {
+    height: 26px;
+    line-height: 26px;
+}
+input[type="file"] {
+    height: 28px;
+    line-height: 28px;
+}
+
+
+select[multiple], select[size] {
+    /*height: auto;*/
+}
+.form_row, .form_row_alt{
+	height: 16px;
+}
+
+.form_table td.form_column_caption {
+	width: 180px;
+	padding: 9px;
+}
+
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+    /*margin-left: -20px;*/
+}
+.radio, .checkbox {
+    min-height: 20px;
+    padding-left: 20px;
+}
+input[type="radio"], input[type="checkbox"] {
+    line-height: normal;
+    /*margin: 4px 0 0;*/
+}
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+}
+
+label.error {
+    background: url("../image/cancel.png") no-repeat scroll 8px 2px rgba(0, 0, 0, 0);
+    color: #EA5200;
+    font-weight: bold;
+    padding-bottom: 2px;
+    padding-left: 26px;
+}
+select.sel-multi-box {
+	width: 250px !important;
+	height: 90px !important;
+}
+
+.form_table input[type="file"] {
+  min-width: 255px;
+  padding-bottom: 28px !important;
+}
+/* Imported from bootstrap*/
+/*
+    Custom Element    The following CSS is consistent between example themes and should not be altered.
+*/
+.form_table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+.form_table > thead > tr > th,
+.form_table > tbody > tr > th,
+.form_table > tfoot > tr > th,
+.form_table > thead > tr > td,
+.form_table > tbody > tr > td,
+.form_table > tfoot > tr > td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #dddddd;
+}
+.form_table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #dddddd;
+}
+.form_table > caption + thead > tr:first-child > th,
+.form_table > colgroup + thead > tr:first-child > th,
+.form_table > thead:first-child > tr:first-child > th,
+.form_table > caption + thead > tr:first-child > td,
+.form_table > colgroup + thead > tr:first-child > td,
+.form_table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+.form_table > tbody + tbody {
+  border-top: 2px solid #dddddd;
+}
+.form_table .table {
+  background-color: #ffffff;
+}
+.form_table input[type="text"], .form_table input[type="email"], .form_table input[type="number"], .form_table input[type="password"] {
+  display: inline;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+	
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;	
+}
+.form_table input[type="radio"], .form_table input[type="checkbox"]{
+  	vertical-align: top;
+	margin-right:7px;
+}
+.form_table input:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form_table input::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.form_table input:-ms-input-placeholder {
+  color: #999999;
+}
+.form_table input::-webkit-input-placeholder {
+  color: #999999;
+}
+.form_table input[disabled],
+.form_table input[readonly],
+fieldset[disabled] .form_table input {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textarea.form_table input {
+  height: auto;
+}
+.form_table select {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555555;
+  background-color: #ffffff;
+  background-image: none;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  display: inline-block;
+}
+.form_table select:focus {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+.form_table select::-moz-placeholder {
+  color: #999999;
+  opacity: 1;
+}
+.form_table select:-ms-input-placeholder {
+  color: #999999;
+}
+.form_table select::-webkit-input-placeholder {
+  color: #999999;
+}
+.form_table select[disabled],
+.form_table select[readonly],
+fieldset[disabled] .form_table select {
+  cursor: not-allowed;
+  background-color: #eeeeee;
+  opacity: 1;
+}
+textarea.form_table select {
+  height: auto;
+}
+.form_table input[type=file] {
+  min-width: 255px;
+  padding-bottom: 39px;
+}
+.form_table input[type=submit] {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: normal;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  padding: 6px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  border-radius: 4px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  color: #ffffff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+.form_table input[type=submit]:hover,
+.form_table input[type=submit]:focus,
+.form_table input[type=submit].focus {
+  color: #333333;
+  text-decoration: none;
+}
+.form_table input[type=submit]:active,
+.form_table input[type=submit].active {
+  outline: 0;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+.form_table input[type=submit].disabled,
+.form_table input[type=submit][disabled],
+fieldset[disabled] .form_table input[type=submit] {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.form_table input[type=submit]:hover,
+.form_table input[type=submit]:focus,
+.form_table input[type=submit].focus,
+.form_table input[type=submit]:active,
+.form_table input[type=submit].active,
+.open > .dropdown-toggle.form_table input[type=submit] {
+  color: #ffffff;
+  background-color: #449d44;
+  border-color: #398439;
+}
+.form_table input[type=submit]:active,
+.form_table input[type=submit].active,
+.open > .dropdown-toggle.form_table input[type=submit] {
+  background-image: none;
+}
+.form_table input[type=submit] .badge {
+  color: #5cb85c;
+  background-color: #ffffff;
+}
+.form_column_caption {
+  font-weight: bold !important;
+}
+.src-form .form_row td,
+form[name=frm_search] .form_row td {
+  padding-bottom: 3px !important;
+}
+.src-form .form_row td input,
+form[name=frm_search] .form_row td input,
+.src-form .form_row td select,
+form[name=frm_search] .form_row td select {
+  height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  width: 130px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+select.src-form .form_row td input,
+selectform[name=frm_search] .form_row td input,
+select.src-form .form_row td select,
+selectform[name=frm_search] .form_row td select {
+  height: 30px;
+  line-height: 30px;
+}
+textarea.src-form .form_row td input,
+textareaform[name=frm_search] .form_row td input,
+textarea.src-form .form_row td select,
+textareaform[name=frm_search] .form_row td select,
+select[multiple].src-form .form_row td input,
+select[multiple]form[name=frm_search] .form_row td input,
+select[multiple].src-form .form_row td select,
+select[multiple]form[name=frm_search] .form_row td select {
+  height: auto;
+}
+.src-form .form_row td input[type=submit],
+form[name=frm_search] .form_row td input[type=submit] {
+  margin-bottom: 5px;
+}

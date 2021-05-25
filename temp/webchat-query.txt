@@ -1,0 +1,21 @@
+SELECT * FROM log_skill_inbound  WHERE call_start_time BETWEEN '2019-11-06 00:00:00' AND '2019-11-06 23:59:59'  AND callid='1573019067211900000' and service_time > 7000;
+UPDATE log_skill_inbound  SET STATUS = 'A', service_time = 0, agent_id = '' WHERE call_start_time BETWEEN '2019-11-06 00:00:00' AND '2019-11-06 23:59:59' AND callid = '1573019067211900000' AND service_time > 7000;
+
+SELECT * FROM log_skill_inbound  WHERE call_start_time BETWEEN '2019-11-08 00:00:00' AND '2019-11-08 23:59:59'  AND callid='1573182218200660000' and service_time > 7000;
+UPDATE log_skill_inbound  SET STATUS = 'A', service_time = 0, agent_id = '' WHERE call_start_time BETWEEN '2019-11-08 00:00:00' AND '2019-11-08 23:59:59' AND callid = '1573182218200660000' AND service_time > 7000;
+
+SELECT * FROM log_skill_inbound  WHERE call_start_time BETWEEN '2019-11-11 00:00:00' AND '2019-11-11 23:59:59'  AND callid='1573470911203780000' and service_time > 7000;
+UPDATE log_skill_inbound  SET STATUS = 'A', service_time = 0, agent_id = '' WHERE call_start_time BETWEEN '2019-11-11 00:00:00' AND '2019-11-11 23:59:59' AND callid = '1573470911203780000' AND service_time > 7000;
+
+SELECT * FROM log_skill_inbound  WHERE call_start_time BETWEEN '2019-11-13 00:00:00' AND '2019-11-13 23:59:59'  AND callid='1573660711210900000' and service_time > 7000;
+UPDATE log_skill_inbound  SET STATUS = 'A', service_time = 0, agent_id = '' WHERE call_start_time BETWEEN '2019-11-13 00:00:00' AND '2019-11-13 23:59:59' AND callid = '1573660711210900000' AND service_time > 7000;
+
+SELECT * FROM log_skill_inbound  WHERE call_start_time BETWEEN '2019-11-13 00:00:00' AND '2019-11-13 23:59:59'  AND callid='1573661246203470000' and service_time > 7000;
+UPDATE log_skill_inbound  SET STATUS = 'A', service_time = 0, agent_id = '' WHERE call_start_time BETWEEN '2019-11-13 00:00:00' AND '2019-11-13 23:59:59' AND callid = '1573661246203470000' AND service_time > 7000;
+
+SELECT * FROM log_skill_inbound  WHERE call_start_time BETWEEN '2019-11-22 00:00:00' AND '2019-11-22 23:59:59'  AND callid='1574412239200730000' and service_time > 7000;
+UPDATE log_skill_inbound  SET STATUS = 'A', service_time = 0, agent_id = '' WHERE call_start_time BETWEEN '2019-11-22 00:00:00' AND '2019-11-22 23:59:59' AND callid = '1574412239200730000' AND service_time > 7000;
+
+SELECT * FROM log_skill_inbound  WHERE call_start_time BETWEEN '2019-11-29 00:00:00' AND '2019-11-29 23:59:59'  AND callid='1575106342211640000' and service_time > 7000;
+UPDATE log_skill_inbound  SET STATUS = 'A', service_time = 0, agent_id = '' WHERE call_start_time BETWEEN '2019-11-29 00:00:00' AND '2019-11-29 23:59:59' AND callid = '1575106342211640000' AND service_time > 7000;
+

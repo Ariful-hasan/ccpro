@@ -1,0 +1,83 @@
+=============================04-07-2018=================================================================================
+Call transfer permission functionality added for supervisor and agent.
+To make the above mentioned functionality working the following db changes
+was required.
+========================================================================================================================
+
+CREATE TABLE `call_transfer_config` (
+ `user_type` char(1) NOT NULL DEFAULT 'A' COMMENT 'user type A=Agents, S=Supervisor',
+ `agents` char(1) NOT NULL DEFAULT 'N' COMMENT 'Can transfer to agents? Y = Yes, N= No',
+ `supervisors` char(1) NOT NULL DEFAULT 'N' COMMENT 'Can transfer to supervisors? Y = Yes, N= No',
+ `skills` char(1) NOT NULL DEFAULT 'N' COMMENT 'Can transfer to skills? Y = Yes, N= No',
+ `ivrs` char(1) NOT NULL DEFAULT 'N' COMMENT 'Can transfer to ivrs? Y = Yes, N= No',
+ UNIQUE KEY `user_type` (`user_type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO call_transfer_config(user_type,agents,supervisors,skills,ivrs) VALUES('A','Y','Y','Y','Y'), ('S','Y','Y','Y','Y');
+
+
+========================================================================================================================
+To allow agents(Robi) to save disposition from call control bar the following
+database changes has been made.
+========================================================================================================================
+
+ALTER TABLE `skill_log` ADD `disposition_id` CHAR(4) CHARACTER SET utf8 COLLATE utf8_general_ci Default ""
+COMMENT "agents put multiple disposition the only first disposition should be inserted here" AFTER `flow_type`,
+ADD INDEX (`disposition_id`);
+
+
+ALTER TABLE `skill_crm_disposition_log`
+ADD `served_account` CHAR(16) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT ''
+COMMENT 'Account number which has been served against this call/ disposition' AFTER `cli`;
+
+
+ALTER TABLE `skill_crm_disposition_log`
+ADD COLUMN `log_date`  date NOT NULL DEFAULT '0000-00-00' AFTER `caller_auth_by`,
+ADD INDEX `log_date` (`log_date`) ,
+ADD INDEX `disposition_id` (`disposition_id`);
+
+alter table skill_crm_disposition_log drop key callid;
+
+alter table skill_crm_disposition_log ADD INDEX `callid` (`callid`);
+
+
+========================================================================================================================
+Supervisor ID field added in agents table for New Tabular Dashboard Report
+========================================================================================================================
+ALTER TABLE `agents`
+ADD COLUMN `supervisor_id`  char(4) NOT NULL DEFAULT '' AFTER `chat_session_limit_with_call`;
+
+========================================================================================================================
+Temporary Disposition code holder, So that agent can save disposition while serving
+========================================================================================================================
+CREATE TABLE `tmp_skill_disposition` (
+ `callid` char(20) NOT NULL DEFAULT '',
+ `disposition_id` char(4) NOT NULL DEFAULT '',
+ PRIMARY KEY (`callid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+alter table tmp_skill_disposition add column disposition_count tinyint(2) unsigned  not null default 0;
+alter table skill_crm_disposition_log add column wrap_up_time decimal(2,0) unsigned not null default 0;
+
+=======================================================================================================================
+To map template Id with skill id for skill wise disposition
+=======================================================================================================================
+CREATE TABLE `skill_disposition_template` (
+  `skill_id` char(2) NOT NULL DEFAULT '',
+  `template_id` char(3) NOT NULL DEFAULT '',
+  PRIMARY KEY (`skill_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='Robi do not use our template but
+  wants to show dispositions at which skill the call landed only.
+  That''s why this table is created to solve the problem';
+
+=======================================================================================================================
+Email field length increased 30 to 50 in agents table
+=======================================================================================================================
+ALTER TABLE agents MODIFY email char(50) NOT NULL default '';
+
+=======================================================================================================================
+11-09-2018 :: SMS body length increased from 255 to 512
+=======================================================================================================================
+alter table sms_templates modify sms_body text(512) not null;
+
+ALTER TABLE sms_templates CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;

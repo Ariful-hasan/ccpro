@@ -1,0 +1,33 @@
+.popup-body {
+	background-color: #fff;
+	margin-top: 0px;
+	width: 98%;
+	/*width: calc(100% - 10px);*/
+}
+.popup-page-title{
+	color: #567567;
+	padding:10px 0px 15px 0px;
+	margin:0px;
+	text-align:center;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight: bold;
+}
+.report_table, .form_table {
+	width:96%;
+}
+.top-title {
+	color: #2583AD;
+	float:none;
+	font-weight: bold;
+}
+.title-area {
+	margin-bottom: 20px;
+}
+.alert {
+	width:85%;
+	text-align:left;
+}
+.popup-body input[type="text"], .popup-body input[type="password"] {
+	height: auto;
+}

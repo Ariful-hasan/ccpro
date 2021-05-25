@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+#wrapper {
+	border-left:1px solid #8D9BA0;
+	border-right:1px solid #8D9BA0;
+}
+
+.btn {
+	border-color: #9DABA0;
+}
+
+.report_table, .form_table {
+	border-top :0.1em solid #BDBBB0 !important;
+	border-left :0.1em solid #BDBBB0 !important;
+	border-right :0.1em solid #BDBBB0 !important;
+	border-bottom :0.1em solid #BDBBB0 !important;
+}
+
+#top-bar-inner {
+	vertical-align: top;
+}
+#top-bar-inner div#nav {
+
+}
+
+#top-bar-inner { width:90%;  }
+
+form[name="frm_search"] table.form_table td {
+	border-top :0.1em solid #BDBBB0 !important;
+}
+

@@ -1,0 +1,23 @@
+#secondary-call-control-bar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background: #48b2de;
+}
+
+#secondary-call-control-bar > div {
+    border-radius: 2px;
+    padding:2px 15px;
+    color:#fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-shadow: 1px 1px #000;
+}
+#secondary-call-control-bar > div:not(:last-child){
+    border-right: 1px solid #fff;
+}
+#last-month-disposition{
+    border: 1px solid #ddd;
+    border-radius: 5px !important;
+    cursor: pointer;
+}

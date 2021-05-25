@@ -1,0 +1,46 @@
+/*------------ orange theme -----------------*/
+.g-chat-customer-window.gccw-orange {
+	/*background-color:#e49726;*/
+}
+
+.g-chat-customer-window.gccw-orange,
+.g-chat-customer-window.gccw-orange .gccw-header {
+	border-color:#e49726;
+}
+ 
+.g-chat-customer-window.gccw-orange #cCustomerInfoSend, .g-chat-customer-window.gccw-orange .gccw-header {
+	color:#ffffff;
+	border:1px solid #e49726;
+	background-color:#e49726;
+	/*
+	background: -webkit-linear-gradient(#faa61a, #b76f05);
+	background: -o-linear-gradient(#faa61a, #b76f05);
+	background: -moz-linear-gradient(#faa61a, #b76f05);
+	background: linear-gradient(#faa61a, #b76f05);
+	*/
+}
+
+.g-chat-customer-window.gccw-orange .gccw-footer {
+	background-color:#cccccc;
+}
+.g-chat-customer-window.gccw-orange, .g-chat-customer-window.gccw-orange .gccw-body {
+	background-color:#fceace;
+}
+.g-chat-customer-window .gccw-footer textarea {
+	background-color:#ffffff;
+}
+#gCCCustomerChatButton.orange { 
+	background-color:#b76f05; 
+}
+.g-chat-customer-window.gccw-blue .btn-primary {
+    background-color: #fff;
+    background-image: none;
+    border-color: #ddd;
+    color: #000;
+}
+.g-chat-customer-window.gccw-blue .btn-return {
+    background-color: #ffb822;
+    background-image: none;
+    border-color: #ffb822;
+    color: #000;
+}

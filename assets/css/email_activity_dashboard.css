@@ -1,0 +1,55 @@
+.pl-0 { padding-left: 0px!important; }
+.pr-0 { padding-right: 0px!important; }
+.pl-3 { padding-left: 3px!important; }
+.pr-3 { padding-right: 3px!important; }
+.pl-5 { padding-left: 5px!important; }
+.pr-5 { padding-right: 5px!important; }
+.center{ text-align: center!important; }
+.txt-22{font-size: 22px!important;}
+.txt-50{font-size: 50px!important;}
+.txt-30{font-size: 30px!important;}
+.txt-18{font-size: 18px!important;}
+.bg-white{background-color: white!important;}
+.bg-red{background-color: #ff1a1a!important;}
+.bg-mid-red{background-color: #f20732!important;}
+.bg-mid-blue{background-color: #07038c!important;}
+.bg-sky-blue{background-color: #63ace5 !important}
+.bg-dark-blue{background-color: #005b96!important;}
+.bg-navy-blue{background-color: #03396c!important;}
+.bg-dip-ocean-blue{background-color: #152040!important;}
+.bg-gray-blue{background-color: #e7eff6!important;}
+.bg-mate-yellow{background-color: #f2be22!important;}
+.bg-dim-yellow{background-color: #f2b705!important;}
+.bg-dark-black{background-color: #000000!important;}
+.bg-paste{background-color: #23d9b7!important;}
+.bg-robi-ash{background-color: #f4f4f4!important;}
+
+.clr-white{color: white!important;}
+.clr-red{color: #ff1a1a!important;}
+.clr-dark-ash{color: #2c3653!important;}
+.bb-1{border: 2px solid #adcbe3}
+.margin-top-17{margin-top: -17%}
+.mt-0{margin-top: 0%}
+.mt-10{margin-top: 10%}
+.mb-0{margin-bottom: 0%}
+.margin-top-8{margin-top: -8%}
+.font-bold{font-weight: bold!important;}
+.font-bolder{font-weight: bolder!important;}
+.txt-responsive-2 {font-size:2vw;}
+.txt-responsive-1 {font-size: 1.15vw;}
+.mt-m2{margin-top: -2%;}
+.mt-m10{margin-top: -10%;}
+
+@media screen and (min-width: 301px) {
+    [class*="txt-responsive-1"] {
+        word-break: break-word;
+    }
+}
+
+.pb-0{padding-bottom: 0px!important;}
+.pt-0{padding-top: 0px!important;}
+.pb-3{padding-bottom: 3px!important;}
+.pt-3{padding-top: 3px!important;}
+.pb-5{padding-bottom: 5px!important;}
+.pt-5{padding-top: 5px!important;}
+.panel-default{margin-bottom: 10px!important;}

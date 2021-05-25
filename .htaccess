@@ -1,0 +1,35 @@
+## Web Firewall
+Order deny,allow
+Deny from all
+Allow from 127.0.0.1
+Allow from 10.0.0.0/8
+Allow from 172.16.0.0/12
+Allow from 192.168.0.0/16
+Allow from 58.65.224.0/26
+Allow from 182.160.113.136/29
+Allow from 72.48.199.112/28
+
+## Exclusively allowed from anywhere for CHAT module
+<Files ~ "chat.php|chat_agent.php|client_info.php">
+	Order Allow,Deny
+	Allow from all
+</Files>
+
+#############################################
+## Please don't change below, if not required
+#############################################
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /ccpro/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?_acc=$0&$1 [QSA,L]
+# RewriteRule ^([^/]*)(.*)$ index.php?_acc=$1 [QSA,L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+# If we don't have mod_rewrite installed, all 404's
+# can be sent to index.php, and everything works as normal.
+# Submitted by: ElliotHaughin
+ErrorDocument 402 /index.php
+</IfModule>

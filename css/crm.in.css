@@ -1,0 +1,234 @@
+@charset "utf-8";
+/* CSS Document */
+label.error {
+display:block;
+font-size:11px;
+}
+.popup-page-title  {
+	font-size: 20px;
+}
+.profile-details-form td {
+	font-size:15px;
+	vertical-align:top;
+}
+
+.profile-details td, .personal-val, .address-val, .contact-val {
+	font-size:15px;
+}
+.p-head td {
+	border-bottom: 3px solid #9AC9DE;
+	font-size: 17px;
+	font-weight: bold;
+	color: #2583AD;
+	margin-bottom: 10px;
+}
+.p-value {
+	font-weight: bold;
+}
+.p-br {
+line-height: 30px;
+}
+.p-head-br {
+line-height: 8px;
+}
+.personal-inp, .address-inp, .contact-inp {
+	display:none;
+}
+#fl_msg_success {
+	display: none;
+	background: #d9f2d9 url("../image/tick.png") no-repeat scroll 5px 9px;
+    box-shadow: 0 0 3px #5F8E5A;
+    color: green;
+	padding: 4px 10px 5px 25px;
+}
+#fl_msg_saving {
+	background: #74a1d6 url("../image/i-5.png") no-repeat scroll 5px 7px;
+    border: 1px solid #fff;
+    box-shadow: 0 0 3px #333;
+    color: #ffffff;
+    display: none;
+    padding: 4px 10px 5px 25px;
+    text-align: left;
+}
+
+#fl_msg_err {
+	display: none;
+	background:#F7E3E9 url("../image/exclamation.png") no-repeat scroll 5px 9px;
+	color:red;
+	box-shadow:0 0 3px #a77678;
+	padding: 4px 10px 5px 25px;
+}
+#fl_msg_del {
+	display: none;
+	background:#F7E3E9 url("../image/exclamation.png") no-repeat scroll 5px 9px;
+	color:green;
+	box-shadow:0 0 3px #a77678;
+	padding: 4px 10px 5px 25px;
+}
+#fl_msg_exists {
+	display: none;
+	background:#F7E3E9 url("../image/exclamation.png") no-repeat scroll 5px 9px;
+	color:red;
+	box-shadow:0 0 3px #a77678;
+	padding: 4px 10px 5px 25px;
+}
+#fl_errmsg_show {
+	z-index: 999;
+    border-radius: 3px;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+	bottom: 40px;
+	right: 15px;
+    font-family: Verdana,Arial,Helvetica,sans-serif;
+    font-weight: bold;
+	font-size: 12px;
+    min-width: 260px;
+    position: fixed;
+    text-align: left;
+	display: none;
+	background:#F7E3E9 url("../image/exclamation.png") no-repeat scroll 4px 7px;
+	color:red;
+	-webkit-box-sizing: padding-box;
+	-moz-box-sizing: padding-box;
+	box-sizing: padding-box;
+	box-shadow: 0 0 3px #a77678;
+	-webkit-box-shadow: 0 0 3px #a77678;
+	padding: 3px 10px 3px 25px;
+}
+.reloaderDiv{
+	text-align: right;
+}
+.act-head {
+    color: #2583AD;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.report_table tr.report_row td, .report_table tr.report_row_alt td {
+	font-size: 13px;
+}
+.report_table tr.report_row_head th {
+	font-size: 13px;
+	padding: 3px;
+}
+.report_extra_info td, .report_table td {
+	font-size:11px;
+}
+select {
+	width: auto;
+}
+span.flash {
+	z-index: 50;
+    border-radius: 3px;
+    bottom: 40px;
+    color: white;
+    font-family: Verdana;
+    font-weight: bold;
+    min-width: 260px;
+    position: fixed;
+    right: 15px;
+    text-align: center;
+}
+span.flash-left {
+	z-index: 50;
+    border-radius: 3px;
+    color: white;
+	font-family: Verdana;
+	font-weight: bold;
+	min-width: 260px;
+	position: fixed;
+	bottom: 40px;
+	left: 70px;
+    text-align: center;
+}
+.section
+{
+	width:100%;
+	clear:both;
+}
+
+.leftCol {
+	width: 48%;
+	float:left;
+	display:inline;
+}
+
+.rightCol {
+	width: 48%;
+	float:right;
+	display:inline;
+}
+
+.sec-head {
+	border-bottom: 3px solid #9AC9DE;
+    color: #2583AD;
+    font-size: 17px;
+    font-weight: bold;
+    
+}
+.sec-fields {
+	width:100%;
+}
+.leftCol div.sec-fields, .rightCol div.sec-fields
+{
+
+	border-collapse: collapse;
+    border-radius: 0.417em;
+    box-shadow: 0 0 5px #091B21;
+	margin:15px 0;
+
+
+}
+.sec-field
+{
+	width:100%;
+	/*float:left;*/
+	padding: 4px 10px;
+
+}
+.sec-fld-label {
+	font-weight:bold;
+	display:inline-block;
+	width:40%;
+	font-size: 13px;
+	vertical-align:top;
+}
+.sec-fld-val {
+	display:inline-block;
+	font-size: 13px;
+	width:58%;
+	/*font-weight:bold;*/
+}
+.sec-clear {
+	clear:both;
+	padding-bottom: 20px;
+}
+.auth-msg {
+	position:fixed;
+	top:83px;
+	right:25px; 
+	font-size:18px;
+	font-family:monospace;
+	font-weight:bold;
+	padding: 4px;
+	padding-left:30px; 
+	padding-right:10px;
+	border-radius:0.417em;
+	z-index: 100001;
+}
+.authentic {
+	background: url("../image/tick.png") no-repeat scroll 5px 6px #D9F2D9;
+	color:green;
+	box-shadow: 0 0 5px #1C6C45;
+}
+.unauthentic {
+	background: url("../image/exclamation.png") no-repeat scroll 5px 6px #F7E3E9;
+	color:red;
+	box-shadow:0 0 4px #BC3A76;
+}
+.sec-filter {
+	margin: 5px 0px 8px 0px;
+}
+.sec-filter .btn {
+	line-height: 16px;
+}

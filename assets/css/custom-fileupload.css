@@ -1,0 +1,83 @@
+.it .btn-orange
+{
+    background-color: blue;
+    border-color: #777!important;
+    color: #777;
+    text-align: left;
+    width:100%;
+}
+.it input.form-control
+{
+
+    border:none;
+    margin-bottom:0px;
+    border-radius: 0px;
+    border-bottom: 1px solid #ddd;
+    box-shadow: none;
+}
+.it .form-control:focus
+{
+    border-color: #ff4d0d;
+    box-shadow: none;
+    outline: none;
+}
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#progress-wrp {
+    border: 1px solid #00c6ff ;
+    padding: 1px;
+    position: relative;
+    height: 10px;
+    border-radius: 3px;
+    margin-top: 10px;
+    text-align: left;
+    background: #fff;
+    box-shadow: inset 1px 3px 6px rgba(0, 0, 0, 0.12);
+}
+
+#progress-wrp .progress-bar {
+    height: 100%;
+    border-radius: 3px;
+    background-color: #0072ff;
+    width: 0;
+    color: white;
+    box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.11);
+}
+
+#progress-wrp .status {
+    top: 3px;
+    left: 50%;
+    position: absolute;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}
+.center {text-align: center;}
+.p-0 {padding: 0px!important;}
+.mt-15 {margin-top: 15px}
+.pb-0 {padding-bottom: 0px!important;}
+.mt-10 {margin-top: 10px}
+
+.bg-success {background-color: #36D7B7}
+.bg-error {background-color: #D91E18}
+.msg-box {
+    margin-top: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}

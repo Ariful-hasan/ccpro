@@ -1,0 +1,284 @@
+<link rel="stylesheet" href="css/timeline.css" />
+<link rel="stylesheet" href="js/lightbox/css/colorbox.css" />
+<script src="js/lightbox/js/jquery.colorbox-min.js"></script>
+<script src="js/ckeditor/ckeditor.js"></script>
+<script src="js/ckeditor/adapters/jquery.js"></script>
+<script>
+//$( document ).ready( function() {
+	//$( 'textarea#mail_body' ).ckeditor();
+//} );
+</script>
+<script type="text/javascript">
+var isSubmit = false;
+var ticketStatus = '';
+
+function setStatus()
+{
+	ticketStatus = $('#pstatus').val();
+	$.colorbox.close();
+}
+
+function submit_form()
+{
+	if (isSubmit) {
+		$("#st").val(ticketStatus);
+		if($("#message").val() != ""){
+//		alert($("#st").val());
+//		return false;
+			$("#ticket_message").attr('action', '<?php echo $sublink; ?>');
+			$("#ticket_message").submit();
+		}else{
+			alert("Message can not be empty!");
+			return false;
+		}
+	}
+	isSubmit = false;
+}
+
+function checkMsg(){
+
+	if($("#message").val() != ""){		
+		isSubmit = true;
+		$('#pstatus').prop('selectedIndex',0);
+		ticketStatus = '';
+		$.colorbox({inline:true, width:"450", href:"#inline_content", onClosed:function(){ submit_form(); }});
+		return false;
+		//$("#ticket_message").attr('action', '<?php echo $sublink; ?>');
+		//$("#ticket_message").submit();
+	}else{
+		alert("Message can not be empty!");
+		return false;
+	}
+}
+
+$(document).ready(function() {
+	$(".email_title").click(function() {
+		$("#b"+$(this).attr('id')).toggle();
+	});
+	
+	$("#status_change").click(function() {
+		$("#spn_new_status").show();
+	});
+	
+	$("#btn_status_change").click(function() {
+		var txt = $("#new_status option:selected").text();
+		var val = $("#new_status").val();
+
+		if (confirm('Are you sure to change the status to "' + txt + '"?')) {
+			$.post('<?php echo $this->url('task='.$request->getControllerName()."&act=statusupdate");?>', { 'tid':'<?php echo $eTickets->ticket_id;?>', 'status':val },
+				function(data, status){
+					if(status=='success' && data == 'Y') {
+						window.location.href=window.location.href;
+					} else {
+						alert('Failed to update status!!' + status);
+					}
+				}
+			);
+		}
+	});
+
+$(".set-options").colorbox({
+	onClosed:function(){ window.location = window.location.href;},
+	iframe:true, width:"450", height:"300"
+});
+
+CKEDITOR.config.extraPlugins = 'mtemplate';
+$( 'textarea#message' ).ckeditor();
+
+});
+
+
+</script>
+
+<style>
+
+*:before, *:after {
+    box-sizing: border-box;
+}
+.fa-envelope:before {
+    content: "?";
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans',sans-serif;
+}
+h3.timeline-header, h3.timeline-header a {
+    border-bottom: 1px solid #F4F4F4;
+    color: #555555;
+    font-size: 16px;
+    line-height: 1.1;
+    margin: 0;
+    padding: 5px;
+	font-weight: 500;
+}
+h3.timeline-header a {
+	font-weight: 600;
+	color: #428BCA;
+    text-decoration: none;
+}
+.time {
+font-family: 'Open Sans',sans-serif;
+font-size:14px;
+}
+</style>
+<link rel="stylesheet" type="text/css" media="screen" href="css/form.css">
+<link rel="stylesheet" type="text/css" media="screen" href="css/report.css">
+
+	<table width="90%" cellspacing="0" cellpadding="5" border="0" class="form_table" style="margin-bottom: 5px;">
+	<tbody>
+	<tr class="form_row_head">
+		<td>Tiket Details :: <?php echo $eTickets->subject; ?></td>
+	</tr>
+	<tr class="form_row">
+		<td>
+			<table width="100%">
+				<tbody>
+				<tr>
+					<td width="25%"><b>User:</b> <?php echo $eTickets->created_for; ?></td>
+					<td width="50%"><b>Created:</b> <?php if ($eTickets->create_time!="" && $eTickets->created_for!=""){echo date("Y-m-d H:i:s", $eTickets->create_time). " by ".$eTickets->created_for;} ?></td>
+				</tr>
+				<tr>
+					<td><b>Skill:</b> <?php echo $eTickets->skill_name; ?></td>
+					<td>
+                    	<b>Status:</b> <?php if ($eTickets->last_update_time!=""){echo '<font style="background-color:#eee;padding:1px;"><i>' . $eTicket_model->getTicketStatusLabel($eTickets->status)."</i></font> on ".date("Y-m-d H:i:s", $eTickets->last_update_time). " by ".$eTickets->status_updated_by;} ?>
+                    	<?php
+							/*if ($update_privilege) {
+							
+							$changable_status = $eTicket_model->getChangableTicketStatus($eTickets->status);
+							if (is_array($changable_status) && count($changable_status) > 0) {
+								echo ' <span id="status_change" style="text-decoration:underline;color:#0000aa;cursor:pointer;">change status</span>';
+								echo '
+								&nbsp;<span id="spn_new_status" style="display:none;"><select id="new_status">';
+								foreach ($changable_status as $st) {
+									echo '<option value="' . $st . '">' . $eTicket_model->getTicketStatusLabel($st) . '</option>';
+								}
+								echo '</select> <input type="button" id="btn_status_change" value="OK" />
+								</span>
+								';
+							}
+							
+							}*/
+							$changable_status = $eTicket_model->getChangableTicketStatus($eTickets->status);
+							
+							if ($update_privilege && is_array($changable_status) && count($changable_status) > 0):
+						?>
+                        <a class="set-options" href="<?php echo $this->url('task='.$request->getControllerName()."&act=status&tid=".$eTickets->ticket_id);?>">
+							Change status
+						</a>
+						<?php endif;?>
+                    </td>
+				</tr>
+				<tr>
+					<td>
+						<b>Assigned To:</b> 
+						<?php if (isset($assigned_to) && !empty($assigned_to)) echo $assigned_to->agent_id . ' - ' . $assigned_to->nick; ?> 
+						<?php if ($update_privilege && is_array($changable_status) && count($changable_status) > 0):?>
+                        <a class="set-options" href="<?php echo $this->url('task='.$request->getControllerName()."&act=assign&tid=".$eTickets->ticket_id);?>">
+							<?php if (empty($eTickets->assigned_to)) echo 'Assign'; else echo 'Change';?>
+						</a>
+						<?php endif;?>
+					</td>
+					<td>
+						<b>Disposition:</b> 
+						<?php if (!empty($disposition)) echo $disposition->title; ?> 
+						<?php if ($update_privilege && is_array($changable_status) && count($changable_status) > 0):?>
+                        <a class="set-options" href="<?php echo $this->url('task='.$request->getControllerName()."&act=disposition&tid=".$eTickets->ticket_id);?>">
+							<?php if (empty($eTickets->disposition_id)) echo 'Add'; else echo 'Change';?>
+						</a>
+						<?php endif;?>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</tr>
+	</tbody>
+	</table>
+
+	<table class="form_table">
+			<?php if ($update_privilege && is_array($changable_status) && count($changable_status) > 0):?>
+            <tr class="form_row">
+				<td valign="top">
+				<form method="post" enctype="application/x-www-form-urlencoded" name="ticket_message" id="ticket_message">
+					<label for="message">Message <font class="required">*</font></label><br>
+					<input type="hidden" name="st" id="st" value="" maxlength="1" />
+                    <textarea style="width:90%; height: 145px;" id="message" name="message"></textarea><br /><br />
+					<input class="form_submit_button" type="button" onclick="checkMsg()" value="Reply" id="submitTicket" name="submitTicket">
+					
+				</form>
+				</td>
+			</tr>
+            <?php else:?>
+			<tr>
+				<td>&nbsp;</td>
+			</tr>
+            <?php endif;?>
+	</table>
+    <ul class="timeline">
+			<?php
+			if (is_array($eTicketEmail)){
+				$i = 0;
+				foreach ($eTicketEmail as $eEmail){
+					$display = $i > 0 ? 'none' : 'block';
+			?>
+			<li>
+            <i class="fa fa-envelope bg-blue"></i>
+            <div class="timeline-item">
+            	<span class="time"><i class="fa fa-clock-o"></i><?php echo strlen($eEmail->tstamp)==10 ? date("Y-m-d H:i:s", $eEmail->tstamp): "processing";?></span>
+                <h3 class="timeline-header email_title" id="m<?php echo $eEmail->mail_sl;?>"><a href="#"><?php echo $eEmail->agent_id=="" ? $eEmail->from_email : $eEmail->agent_id;?></a> wrote message</h3>
+                                    <div class="timeline-body" style="display:<?php echo $display;?>;" id="bm<?php echo $eEmail->mail_sl;?>">
+                                        <?php echo nl2br($eEmail->mail_body); ?>
+                                    </div>
+				
+                <!--
+                <td style="cursor:pointer;" class="email_title" id="m<?php echo $eEmail->mail_sl;?>">&nbsp;<div style="display:inline-block;width:300px;"><b>User:</b> <?php echo $eEmail->agent_id=="" ? $eEmail->from_email : $eEmail->agent_id;?> </div>&nbsp; <b>Time:</b> <?php echo strlen($eEmail->tstamp)==10 ? date("Y-m-d H:i:s", $eEmail->tstamp): "processing";?> &nbsp; <b>Subject:</b> <?php echo $eEmail->subject; ?></td>
+			</tr>
+			<tr>
+				<td bgcolor="#FFFFFF" style="text-align:left;padding:5px;display:<?php echo $display;?>;" id="bm<?php echo $eEmail->mail_sl;?>"><span><?php echo nl2br($eEmail->mail_body); ?><br></span></td>
+			</tr>
+            -->
+            </div>
+			</li>
+			<?php
+					$i++;
+				}
+			 } 
+			?>
+</ul>
+
+<?php if ($update_privilege):?>
+<div style='display:none'>
+	<div id='inline_content'>
+<div class="popup-body">
+<center>
+<div class="title-area">
+<div class="top-title">Update status of ticket</div>
+<div class="clearb"></div>
+</div>
+<table class="form_table" style="width:90%;">
+	<tr class="form_row_alt">
+		<td class="form_column_caption" style="text-align:center;"><b>Status:</b>
+			<select name="pstatus" id="pstatus">
+				<option value="">Select</option>
+				<?php if (is_array($changable_status)) {
+					foreach ($changable_status as $st) {
+						echo '<option value="' . $st . '"';
+						if ($eTickets->status == $st) echo ' selected';
+						echo '>' . $eTicket_model->getTicketStatusLabel($st) . '</option>';
+					}
+				}
+				?>
+			</select>
+		</td>
+	</tr>
+<tr class="form_row">
+		<td class="form_column_submit" style="text-align:center;padding:20px 0;">
+			<input class="form_submit_button" type="button" value="OK" name="submitagent" onclick="setStatus();" />  &nbsp; &nbsp;
+            <input class="form_submit_button" type="button" value="Cancel" name="submitcancel" onclick="$.colorbox.close();" />
+            
+		</td>
+	</tr>
+</table>
+</center>
+</div>
+	</div>
+</div>
+<?php endif;?>

@@ -1,0 +1,4 @@
+## Exclusively allowed from anywhere for CHAT
+#############################################
+Order allow,deny
+Allow from all

@@ -1,0 +1,1 @@
+a:6:{s:8:"off_hour";s:0:"";s:7:"welcome";s:0:"";s:11:"invalid_key";s:0:"";s:15:"language_select";s:0:"";s:7:"goodbye";s:0:"";s:14:"timeout_action";s:0:"";}

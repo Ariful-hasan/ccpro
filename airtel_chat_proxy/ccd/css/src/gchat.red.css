@@ -1,0 +1,44 @@
+/*------------ red theme -----------------*/
+.g-chat-customer-window.gccw-red {
+	/*background-color:#E60000;*/
+}
+
+.g-chat-customer-window.gccw-red,
+.g-chat-customer-window.gccw-red .gccw-header {
+	border-color:#E60000;
+}
+ 
+.g-chat-customer-window.gccw-red #cCustomerInfoSend, .g-chat-customer-window.gccw-red .gccw-header {
+	color:#ffffff;
+	border:1px solid #E60000;
+	background-color:#E60000;
+	/*
+	background: -webkit-linear-gradient(#7f97ca, #4965A0);
+	background: -o-linear-gradient(#7f97ca, #4965A0);
+	background: -moz-linear-gradient(#7f97ca, #4965A0);
+	background: linear-gradient(#7f97ca, #4965A0);
+	*/
+}
+
+.g-chat-customer-window.gccw-red .gccw-footer {
+	background-color:#C58180;
+}
+.g-chat-customer-window.gccw-red .gccw-body {
+	/*background-color:#C58180;*/
+}
+.g-chat-customer-window .gccw-footer textarea {
+	background-color:#ffffff;
+}
+
+.g-chat-customer-window.gccw-red .btn-primary {
+    background-color: #fff;
+    background-image: none;
+    border-color: #ddd;
+    color: #000;
+}
+.g-chat-customer-window.gccw-red .btn-return {
+    background-color: #ffb822;
+    background-image: none;
+    border-color: #ffb822;
+    color: #000;
+}

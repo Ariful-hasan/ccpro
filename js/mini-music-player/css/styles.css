@@ -1,0 +1,228 @@
+/*
+    AUTHOR: Sam Johnson
+    MINIMusic Player 
+    Url: https://www.jqueryscript.net/other/Minimal-jQuery-Cross-platform-Audio-Player-MINImusic-Player.html
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML5 Audio player with playlist styles */
+.example, .example2 {
+    margin: 50px auto 0;
+    width: 390px;
+}
+
+.player {
+    background: #eaeaea;
+    height: 105px;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+    border-radius: 10px 10px 0px 0px;
+    webkit-box-shadow: 0 0 6px 1px rgba(195, 195, 195);
+    box-shadow: 0 0 6px 1px rgba(195, 195, 195);
+}
+.player .title, .player .artist {
+    font-family: verdana;
+    left: 167px;
+    position: absolute;
+
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.player .title {
+    color: #151B48;
+    font-size: 14px;
+    font-weight: bold;
+    top: 10px;
+}
+.artist {
+    color: #151B48;
+    font-size: 12px;
+    top: 30px;
+}
+.pl {
+    background: url(../images/playlist.png) no-repeat;
+    cursor: pointer;
+    height: 40px;
+    left: 645px;
+    position: absolute;
+    top: 21px;
+    width: 39px;
+}
+.pl:hover {
+    top: 21px;
+}
+.cover {
+    border-radius: 5px 5px 5px 5px;
+    height: 80px;
+    left: 12px;
+    position: absolute;
+    top: 16px;
+    width: 80px;
+}
+.controls {
+    cursor: pointer;
+    left: 0px;
+    position: absolute;
+    top: 55px;
+    left: 122px;
+}
+.controls .play, .controls .pause {
+    width: 30px;
+    height: 30px;
+    margin: 5px 5px 0px 5px;
+}
+.controls .play, .controls .pause, .controls .rew, .controls .fwd, .controls .stop {
+   text-indent: -10000px;
+    border: none;
+    float: left;
+}
+.controls .rew, .controls .fwd, .controls .stop {
+    width: 30px;
+    height: 30px;
+    margin: 5px 5px 5px 5px;
+}
+.controls .play {
+    background: url(../images/play.png) no-repeat;
+}
+.controls .pause {
+    background: url(../images/pause.png) no-repeat;
+    display: none;
+}
+.controls .rew {
+    background: url(../images/rewind.png) no-repeat;
+}
+.controls .fwd {
+    background: url(../images/next.png) no-repeat;
+}
+.controls .stop {
+    background: url(../images/stop.png) no-repeat;
+}
+.hidden {
+    display: none;
+}
+.controls .visible {
+    display: block;
+}
+.volume {
+    height: 11px;
+    left: 325px;
+    position: absolute;
+    top: 72px;
+    width: 138px;
+}
+.mute  .volume-btn {
+    background: url(../images/volume-off.png) no-repeat;
+}
+.volume-btn {
+    background: url(../images/volume-up.png) no-repeat;
+    height: 20px;
+    width: 20px;
+    float: left;
+    position: relative;
+    top: -6px;
+}
+.volume-adjust {
+    height: 8px;
+    position: relative;
+    width: 80%;
+    background: #fff;
+    float: right;
+}
+.volume-adjust  > div > div {
+    height: 8px;
+    background: #151B48;
+}
+.progressbar
+{
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 1;
+    right: 6.875em;
+    height: 8px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+.novolume .progressbar
+{
+    right: 4.375em; /* 70 */
+}
+.progressbar div
+{
+    height: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 5px 0px 0px 0px;
+}
+.bar-loaded
+{
+    background-color: #f1f1f1;
+    z-index: 1;
+}
+.bar-played
+{
+    background: #151B48;
+    z-index: 2;
+}
+.timeHolder {
+    color: #151B48;
+    font-size: 14px;
+    font-weight: bold;
+    bottom: 17px;
+    position: absolute;
+    margin: 0px 70%;
+    width: 20%;
+}
+.time-current, .time-duration, .time-separator {
+    color: #151B48;
+    font-size: 14px;
+    font-weight: bold;
+    float: left;
+}
+.volume .ui-slider-handle {
+    background: url("../images/spr.png") no-repeat scroll -201px -188px rgba(0, 0, 0, 0);
+    height: 13px;
+    width: 13px;
+}
+.playlist {
+    background-color: #f5f5f5;
+    list-style-type: none;
+    margin: -10px 0 0 2px;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin: 0px auto;
+    max-height: 200px;
+    overflow-y: auto;
+    border-radius: 0px 0px 10px 10px;
+    webkit-box-shadow: 0 0 6px 1px rgba(0,0,0,.1);
+    box-shadow: 0 0 6px 1px rgba(0,0,0,.1);
+    border: 1px solid #d6ced6;
+}
+.playlist li,
+.playlist div {
+    color: #151B48;
+    cursor: pointer;
+    margin: 1px 1px 5px 18px;
+    border-bottom: 1px solid #aaaaaa;
+    width: 95%;
+    padding-bottom: 7px;
+}
+.playlist li > a,
+.playlist div > a {
+   color: #151B48;
+   text-decoration: none; 
+}
+.playlist li.active,
+.playlist div.active {
+    font-weight: bold;
+}

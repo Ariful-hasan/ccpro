@@ -1,0 +1,14 @@
+[v-cloak] {display: none}
+th:hover{cursor: pointer}
+.p-0{padding: 0; }
+.m-b-0{ margin-bottom: 0}
+.header-summary{display: block; margin-bottom: 30px; min-height: 35px; margin-left: -28px}
+.header-item{border: 1px solid #ddd; text-shadow: 2px 0 }
+.highlight{background: yellow}
+
+.container-fluid{padding:0}
+tr {width: 100%;display: inline-table;table-layout: fixed;}
+table{max-height: 65vh;}
+thead tr { float: left; width: 99%;}
+tbody{overflow-y: scroll; max-height: 65vh;position: absolute;}
+tfoot{ position: fixed; bottom: 0; background: #dedede }

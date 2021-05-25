@@ -1,0 +1,11 @@
+alter table skill_crm_template_fields add sl char(2) NOT NULL DEFAULT '' AFTER section_id;
+
+
+ bdtusar:?
+[D] => stdClass Object
+(
+[section_title] => TPIN
+[section_type] => T
+[is_editable] => N
+[tpin_status] => N12:31 PM
+bdtusar:? Generate TIN / Re-Generate TIN / Pending

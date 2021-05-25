@@ -1,0 +1,146 @@
+@charset "utf-8";
+/* CSS Document */
+
+.form_table td.form_column_submit {
+	text-align:left;
+	padding: 10px;
+	padding-left: 200px;
+}
+
+.form_submit_button {
+	background-color: #49AFCD;
+    background-image: linear-gradient(to bottom, #5BC0DE, #2F96B4);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    line-height: 18px;
+}
+
+.form_table {
+	margin-top: 15px;
+}
+.form_table td {
+	padding: 5px;
+}
+
+tr.form_row_head td {
+	background: url("../image/tr_back.gif") repeat-x scroll 0 0 #328AA4;
+    color: #FFFFFF;
+    font-weight: bold;
+    border: 1px solid #FFFFFF;
+    padding: 0.5em;
+    text-align: left;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: middle;
+}
+button, input {
+    line-height: normal;
+}
+label, input, button, select, textarea {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+}
+input, button, select, textarea {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+input, textarea, .uneditable-input {
+    margin-left: 0;
+}
+input, textarea, .uneditable-input {
+    margin-left: 0;
+}
+
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    border-radius: 4px 4px 4px 4px;
+    color: #232323;
+    display: inline-block;
+    font-size: 14px;
+/*
+    height: 16px;
+    line-height: 16px;
+*/
+    margin-bottom: 0px;
+    padding: 3px 5px;
+    vertical-align: middle;
+}
+
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+}
+
+textarea:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .uneditable-input:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+    outline: 0 none;
+}
+
+
+select {
+    background-color: #FFFFFF;
+    border: 1px solid #CCCCCC;
+    width: 220px;
+}
+
+select {
+    height: 26px;
+    line-height: 26px;
+}
+input[type="file"] {
+    height: 28px;
+    line-height: 28px;
+}
+
+input[type="text"], input[type="password"] {
+    height: 19px;
+    line-height: 19px;
+}
+
+select[multiple], select[size] {
+    /*height: auto;*/
+}
+.form_row, .form_row_alt{
+	height: 16px;
+}
+
+.form_table td.form_column_caption {
+	width: 180px;
+	padding: 9px;
+}
+
+.radio input[type="radio"], .checkbox input[type="checkbox"] {
+    /*margin-left: -20px;*/
+}
+.radio, .checkbox {
+    min-height: 20px;
+    padding-left: 20px;
+}
+input[type="radio"], input[type="checkbox"] {
+    line-height: normal;
+    /*margin: 4px 0 0;*/
+}
+label, select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+    cursor: pointer;
+}
+
+label.error {
+    background: url("../image/cancel.png") no-repeat scroll 8px 2px rgba(0, 0, 0, 0);
+    color: #EA5200;
+    font-weight: bold;
+    padding-bottom: 2px;
+    padding-left: 26px;
+}
+select.sel-multi-box {
+	width: 250px;
+	height: 90px;
+}
+
